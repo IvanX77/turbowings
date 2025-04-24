@@ -26,7 +26,7 @@ import (
 	"golang.org/x/sys/unix"
 	"gopkg.in/yaml.v2"
 
-	"github.com/lionpanel-dev/lionwings/system"
+	"github.com/IvanX77/lionwings/system"
 )
 
 const DefaultLocation = "/etc/lionpanel/config.yml"
