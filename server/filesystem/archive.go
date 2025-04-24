@@ -16,9 +16,9 @@ import (
 	"github.com/klauspost/pgzip"
 	ignore "github.com/sabhiram/go-gitignore"
 
-	"github.com/lionpanel-dev/lionwings/config"
-	"github.com/lionpanel-dev/lionwings/internal/progress"
-	"github.com/lionpanel-dev/lionwings/internal/ufs"
+	"github.com/IvanX77/lionwings/config"
+	"github.com/IvanX77/lionwings/internal/progress"
+	"github.com/IvanX77/lionwings/internal/ufs"
 )
 
 const memory = 4 * 1024

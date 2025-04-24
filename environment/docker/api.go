@@ -15,7 +15,7 @@ import (
 	"github.com/docker/docker/errdefs"
 	"github.com/goccy/go-json"
 
-	"github.com/lionpanel-dev/lionwings/config"
+	"github.com/IvanX77/lionwings/config"
 )
 
 var (

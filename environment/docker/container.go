@@ -18,9 +18,9 @@ import (
 	"github.com/docker/docker/api/types/network"
 	"github.com/docker/docker/client"
 
-	"github.com/lionpanel-dev/lionwings/config"
-	"github.com/lionpanel-dev/lionwings/environment"
-	"github.com/lionpanel-dev/lionwings/system"
+	"github.com/IvanX77/lionwings/config"
+	"github.com/IvanX77/lionwings/environment"
+	"github.com/IvanX77/lionwings/system"
 )
 
 var ErrNotAttached = errors.Sentinel("not attached to instance")

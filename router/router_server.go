@@ -2,7 +2,7 @@ package router
 
 import (
 	"context"
-	"github.com/lionpanel-dev/lionwings/config"
+	"github.com/IvanX77/lionwings/config"
 	"net/http"
 	"os"
 	"strconv"
@@ -11,11 +11,11 @@ import (
 	"github.com/apex/log"
 	"github.com/gin-gonic/gin"
 
-	"github.com/lionpanel-dev/lionwings/router/downloader"
-	"github.com/lionpanel-dev/lionwings/router/middleware"
-	"github.com/lionpanel-dev/lionwings/router/tokens"
-	"github.com/lionpanel-dev/lionwings/server"
-	"github.com/lionpanel-dev/lionwings/server/transfer"
+	"github.com/IvanX77/lionwings/router/downloader"
+	"github.com/IvanX77/lionwings/router/middleware"
+	"github.com/IvanX77/lionwings/router/tokens"
+	"github.com/IvanX77/lionwings/server"
+	"github.com/IvanX77/lionwings/server/transfer"
 )
 
 // Returns a single server from the collection of servers.

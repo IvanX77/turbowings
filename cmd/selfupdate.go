@@ -12,7 +12,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/lionpanel-dev/lionwings/system"
+	"github.com/IvanX77/lionwings/system"
 	"github.com/spf13/cobra"
 )
 

@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/lionpanel-dev/lionwings/internal/progress"
-	"github.com/lionpanel-dev/lionwings/server/filesystem"
+	"github.com/IvanX77/lionwings/internal/progress"
+	"github.com/IvanX77/lionwings/server/filesystem"
 )
 
 // Archive returns an archive that can be used to stream the contents of the

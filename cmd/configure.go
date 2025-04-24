@@ -16,7 +16,7 @@ import (
 	"github.com/goccy/go-json"
 	"github.com/spf13/cobra"
 
-	"github.com/lionpanel-dev/lionwings/config"
+	"github.com/IvanX77/lionwings/config"
 )
 
 var configureArgs struct {

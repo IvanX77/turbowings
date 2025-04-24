@@ -6,7 +6,7 @@ import (
 	"strconv"
 	"sync"
 
-	"github.com/lionpanel-dev/lionwings/internal/models"
+	"github.com/IvanX77/lionwings/internal/models"
 
 	"emperror.dev/errors"
 	"github.com/apex/log"

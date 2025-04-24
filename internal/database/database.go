@@ -9,9 +9,9 @@ import (
 	"gorm.io/gorm"
 	"gorm.io/gorm/logger"
 
-	"github.com/lionpanel-dev/lionwings/config"
-	"github.com/lionpanel-dev/lionwings/internal/models"
-	"github.com/lionpanel-dev/lionwings/system"
+	"github.com/IvanX77/lionwings/config"
+	"github.com/IvanX77/lionwings/internal/models"
+	"github.com/IvanX77/lionwings/system"
 )
 
 var (

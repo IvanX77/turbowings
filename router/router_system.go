@@ -9,11 +9,11 @@ import (
 	"github.com/apex/log"
 	"github.com/gin-gonic/gin"
 
-	"github.com/lionpanel-dev/lionwings/config"
-	"github.com/lionpanel-dev/lionwings/router/middleware"
-	"github.com/lionpanel-dev/lionwings/server"
-	"github.com/lionpanel-dev/lionwings/server/installer"
-	"github.com/lionpanel-dev/lionwings/system"
+	"github.com/IvanX77/lionwings/config"
+	"github.com/IvanX77/lionwings/router/middleware"
+	"github.com/IvanX77/lionwings/server"
+	"github.com/IvanX77/lionwings/server/installer"
+	"github.com/IvanX77/lionwings/system"
 )
 
 // Returns information about the system that lionwings is running on.

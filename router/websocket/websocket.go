@@ -8,7 +8,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/lionpanel-dev/lionwings/internal/models"
+	"github.com/IvanX77/lionwings/internal/models"
 
 	"emperror.dev/errors"
 	"github.com/apex/log"
@@ -18,13 +18,13 @@ import (
 	"github.com/google/uuid"
 	"github.com/gorilla/websocket"
 
-	"github.com/lionpanel-dev/lionwings/system"
+	"github.com/IvanX77/lionwings/system"
 
-	"github.com/lionpanel-dev/lionwings/config"
-	"github.com/lionpanel-dev/lionwings/environment"
-	"github.com/lionpanel-dev/lionwings/environment/docker"
-	"github.com/lionpanel-dev/lionwings/router/tokens"
-	"github.com/lionpanel-dev/lionwings/server"
+	"github.com/IvanX77/lionwings/config"
+	"github.com/IvanX77/lionwings/environment"
+	"github.com/IvanX77/lionwings/environment/docker"
+	"github.com/IvanX77/lionwings/router/tokens"
+	"github.com/IvanX77/lionwings/server"
 )
 
 const (

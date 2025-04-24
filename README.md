@@ -6,3 +6,16 @@ instances, fetch server logs, generate backups, and control all aspects of the s
 
 In addition, LionWings ships with a built-in SFTP server allowing your system to remain free of LionPanel specific
 dependencies, and allowing users to authenticate with the same credentials they would normally use to access the Panel.
+<<<<<<< HEAD
+=======
+
+## Documentation
+
+* [Panel Documentation](https://lionpanel.dev/docs/panel/getting-started)
+* [LionWings Documentation](https://lionpanel.dev/docs/lionwings/install)
+* Or, get additional help [via Discord](https://discord.gg/lionpanel-panel)
+
+## Reporting Issues
+
+Feel free to report any lionwings specific issues or feature requests in [GitHub Issues](https://github.com/IvanX77/lionwings/issues/new).
+>>>>>>> b4ff600 (Updated modules)

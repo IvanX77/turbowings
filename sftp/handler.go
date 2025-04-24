@@ -12,9 +12,9 @@ import (
 	"github.com/pkg/sftp"
 	"golang.org/x/crypto/ssh"
 
-	"github.com/lionpanel-dev/lionwings/config"
-	"github.com/lionpanel-dev/lionwings/server"
-	"github.com/lionpanel-dev/lionwings/server/filesystem"
+	"github.com/IvanX77/lionwings/config"
+	"github.com/IvanX77/lionwings/server"
+	"github.com/IvanX77/lionwings/server/filesystem"
 )
 
 const (

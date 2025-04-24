@@ -15,9 +15,9 @@ import (
 	"github.com/juju/ratelimit"
 	"github.com/mholt/archives"
 
-	"github.com/lionpanel-dev/lionwings/config"
-	"github.com/lionpanel-dev/lionwings/remote"
-	"github.com/lionpanel-dev/lionwings/server/filesystem"
+	"github.com/IvanX77/lionwings/config"
+	"github.com/IvanX77/lionwings/remote"
+	"github.com/IvanX77/lionwings/server/filesystem"
 )
 
 type S3Backup struct {

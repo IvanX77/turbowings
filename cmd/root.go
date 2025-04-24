@@ -27,16 +27,16 @@ import (
 	"golang.org/x/crypto/acme"
 	"golang.org/x/crypto/acme/autocert"
 
-	"github.com/lionpanel-dev/lionwings/config"
-	"github.com/lionpanel-dev/lionwings/environment"
-	"github.com/lionpanel-dev/lionwings/internal/cron"
-	"github.com/lionpanel-dev/lionwings/internal/database"
-	"github.com/lionpanel-dev/lionwings/loggers/cli"
-	"github.com/lionpanel-dev/lionwings/remote"
-	"github.com/lionpanel-dev/lionwings/router"
-	"github.com/lionpanel-dev/lionwings/server"
-	"github.com/lionpanel-dev/lionwings/sftp"
-	"github.com/lionpanel-dev/lionwings/system"
+	"github.com/IvanX77/lionwings/config"
+	"github.com/IvanX77/lionwings/environment"
+	"github.com/IvanX77/lionwings/internal/cron"
+	"github.com/IvanX77/lionwings/internal/database"
+	"github.com/IvanX77/lionwings/loggers/cli"
+	"github.com/IvanX77/lionwings/remote"
+	"github.com/IvanX77/lionwings/router"
+	"github.com/IvanX77/lionwings/server"
+	"github.com/IvanX77/lionwings/sftp"
+	"github.com/IvanX77/lionwings/system"
 )
 
 var (
@@ -465,8 +465,8 @@ __ [blue][bold]LionPanel[reset] _____/___/_______ _______ ______
 Copyright © 2018 - %d Dane Everitt & Contributors
 
 Website:  https://lionpanel.dev
- Source:  https://github.com/lionpanel-dev/lionwings
-License:  https://github.com/lionpanel-dev/lionwings/blob/main/LICENSE
+ Source:  https://github.com/IvanX77/lionwings
+License:  https://github.com/IvanX77/lionwings/blob/main/LICENSE
 
 This software is made available under the terms of the MIT license.
 The above copyright notice and this permission notice shall be included

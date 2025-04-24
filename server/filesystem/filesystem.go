@@ -17,8 +17,8 @@ import (
 	"github.com/gabriel-vasile/mimetype"
 	ignore "github.com/sabhiram/go-gitignore"
 
-	"github.com/lionpanel-dev/lionwings/config"
-	"github.com/lionpanel-dev/lionwings/internal/ufs"
+	"github.com/IvanX77/lionwings/config"
+	"github.com/IvanX77/lionwings/internal/ufs"
 )
 
 type Filesystem struct {

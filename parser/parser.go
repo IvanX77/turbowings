@@ -17,8 +17,8 @@ import (
 	"gopkg.in/ini.v1"
 	"gopkg.in/yaml.v3"
 
-	"github.com/lionpanel-dev/lionwings/config"
-	"github.com/lionpanel-dev/lionwings/internal/ufs"
+	"github.com/IvanX77/lionwings/config"
+	"github.com/IvanX77/lionwings/internal/ufs"
 )
 
 // The file parsing options that are available for a server configuration file.

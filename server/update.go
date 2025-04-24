@@ -3,9 +3,9 @@ package server
 import (
 	"time"
 
-	"github.com/lionpanel-dev/lionwings/environment/docker"
+	"github.com/IvanX77/lionwings/environment/docker"
 
-	"github.com/lionpanel-dev/lionwings/environment"
+	"github.com/IvanX77/lionwings/environment"
 )
 
 // SyncWithEnvironment updates the environment for the server to match any of

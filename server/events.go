@@ -1,8 +1,8 @@
 package server
 
 import (
-	"github.com/lionpanel-dev/lionwings/events"
-	"github.com/lionpanel-dev/lionwings/system"
+	"github.com/IvanX77/lionwings/events"
+	"github.com/IvanX77/lionwings/system"
 )
 
 // Defines all the possible output events for a server.

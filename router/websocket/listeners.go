@@ -8,10 +8,10 @@ import (
 	"emperror.dev/errors"
 	"github.com/goccy/go-json"
 
-	"github.com/lionpanel-dev/lionwings/events"
-	"github.com/lionpanel-dev/lionwings/system"
+	"github.com/IvanX77/lionwings/events"
+	"github.com/IvanX77/lionwings/system"
 
-	"github.com/lionpanel-dev/lionwings/server"
+	"github.com/IvanX77/lionwings/server"
 )
 
 // RegisterListenerEvents will setup the server event listeners and expiration

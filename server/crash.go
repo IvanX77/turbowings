@@ -9,9 +9,9 @@ import (
 	"emperror.dev/errors"
 	"github.com/apex/log"
 
-	"github.com/lionpanel-dev/lionwings/config"
-	"github.com/lionpanel-dev/lionwings/environment"
-	"github.com/lionpanel-dev/lionwings/internal/models"
+	"github.com/IvanX77/lionwings/config"
+	"github.com/IvanX77/lionwings/environment"
+	"github.com/IvanX77/lionwings/internal/models"
 
 )
 

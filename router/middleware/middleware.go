@@ -12,10 +12,10 @@ import (
 	"github.com/gin-gonic/gin"
 	"github.com/google/uuid"
 
-	"github.com/lionpanel-dev/lionwings/config"
-	"github.com/lionpanel-dev/lionwings/remote"
-	"github.com/lionpanel-dev/lionwings/server"
-	"github.com/lionpanel-dev/lionwings/system"
+	"github.com/IvanX77/lionwings/config"
+	"github.com/IvanX77/lionwings/remote"
+	"github.com/IvanX77/lionwings/server"
+	"github.com/IvanX77/lionwings/system"
 )
 
 // AttachRequestID attaches a unique ID to the incoming HTTP request so that any

@@ -17,7 +17,7 @@ import (
 	"github.com/goccy/go-json"
 	"github.com/google/uuid"
 
-	"github.com/lionpanel-dev/lionwings/server"
+	"github.com/IvanX77/lionwings/server"
 )
 
 var client *http.Client

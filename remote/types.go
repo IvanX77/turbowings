@@ -8,7 +8,7 @@ import (
 	"github.com/apex/log"
 	"github.com/goccy/go-json"
 
-	"github.com/lionpanel-dev/lionwings/parser"
+	"github.com/IvanX77/lionwings/parser"
 )
 
 const (

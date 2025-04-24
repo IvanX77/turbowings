@@ -40,7 +40,7 @@ jobs:
           GOOS: ${{ matrix.goos }}
           GOARCH: ${{ matrix.goarch }}
           CGO_ENABLED: 0
-          SRC_PATH: github.com/lionpanel-dev/lionwings
+          SRC_PATH: github.com/IvanX77/lionwings
         run: |
           go build -v -trimpath -ldflags="-s -w -X ${SRC_PATH}/system.Version=dev-${GITHUB_SHA:0:7}" -o dist/lionwings ${SRC_PATH}
           go build -v -trimpath -ldflags="-X ${SRC_PATH}/system.Version=dev-${GITHUB_SHA:0:7}" -o dist/wings_debug ${SRC_PATH}

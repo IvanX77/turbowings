@@ -4,8 +4,8 @@ import (
 	"sync"
 	"sync/atomic"
 
-	"github.com/lionpanel-dev/lionwings/environment"
-	"github.com/lionpanel-dev/lionwings/system"
+	"github.com/IvanX77/lionwings/environment"
+	"github.com/IvanX77/lionwings/system"
 )
 
 // ResourceUsage defines the current resource usage for a given server instance. If a server is offline you

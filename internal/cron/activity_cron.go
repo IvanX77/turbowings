@@ -6,10 +6,10 @@ import (
 
 	"emperror.dev/errors"
 
-	"github.com/lionpanel-dev/lionwings/internal/database"
-	"github.com/lionpanel-dev/lionwings/internal/models"
-	"github.com/lionpanel-dev/lionwings/server"
-	"github.com/lionpanel-dev/lionwings/system"
+	"github.com/IvanX77/lionwings/internal/database"
+	"github.com/IvanX77/lionwings/internal/models"
+	"github.com/IvanX77/lionwings/server"
+	"github.com/IvanX77/lionwings/system"
 )
 
 type activityCron struct {

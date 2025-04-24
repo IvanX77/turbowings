@@ -1,4 +1,4 @@
-module github.com/lionpanel-dev/lionwings
+module github.com/IvanX77/lionwings
 
 go 1.23.0
 

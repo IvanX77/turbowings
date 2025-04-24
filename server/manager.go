@@ -15,11 +15,11 @@ import (
 	"github.com/gammazero/workerpool"
 	"github.com/goccy/go-json"
 
-	"github.com/lionpanel-dev/lionwings/config"
-	"github.com/lionpanel-dev/lionwings/environment"
-	"github.com/lionpanel-dev/lionwings/environment/docker"
-	"github.com/lionpanel-dev/lionwings/remote"
-	"github.com/lionpanel-dev/lionwings/server/filesystem"
+	"github.com/IvanX77/lionwings/config"
+	"github.com/IvanX77/lionwings/environment"
+	"github.com/IvanX77/lionwings/environment/docker"
+	"github.com/IvanX77/lionwings/remote"
+	"github.com/IvanX77/lionwings/server/filesystem"
 )
 
 type Manager struct {

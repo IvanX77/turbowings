@@ -7,11 +7,11 @@ import (
 
 	"github.com/gin-gonic/gin"
 
-	"github.com/lionpanel-dev/lionwings/config"
-	"github.com/lionpanel-dev/lionwings/internal/ufs"
-	"github.com/lionpanel-dev/lionwings/router/middleware"
-	"github.com/lionpanel-dev/lionwings/server"
-	"github.com/lionpanel-dev/lionwings/server/filesystem"
+	"github.com/IvanX77/lionwings/config"
+	"github.com/IvanX77/lionwings/internal/ufs"
+	"github.com/IvanX77/lionwings/router/middleware"
+	"github.com/IvanX77/lionwings/server"
+	"github.com/IvanX77/lionwings/server/filesystem"
 )
 
 // Structs needed to respond with the matched files and all their info

@@ -17,12 +17,12 @@ import (
 	"github.com/creasty/defaults"
 	"github.com/goccy/go-json"
 
-	"github.com/lionpanel-dev/lionwings/config"
-	"github.com/lionpanel-dev/lionwings/environment"
-	"github.com/lionpanel-dev/lionwings/events"
-	"github.com/lionpanel-dev/lionwings/remote"
-	"github.com/lionpanel-dev/lionwings/server/filesystem"
-	"github.com/lionpanel-dev/lionwings/system"
+	"github.com/IvanX77/lionwings/config"
+	"github.com/IvanX77/lionwings/environment"
+	"github.com/IvanX77/lionwings/events"
+	"github.com/IvanX77/lionwings/remote"
+	"github.com/IvanX77/lionwings/server/filesystem"
+	"github.com/IvanX77/lionwings/system"
 )
 
 // Server is the high level definition for a server instance being controlled

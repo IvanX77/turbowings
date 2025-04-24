@@ -9,11 +9,11 @@ import (
 	"emperror.dev/errors"
 	"github.com/gin-gonic/gin"
 
-	"github.com/lionpanel-dev/lionwings/environment"
-	"github.com/lionpanel-dev/lionwings/router/middleware"
-	"github.com/lionpanel-dev/lionwings/server"
-	"github.com/lionpanel-dev/lionwings/server/installer"
-	"github.com/lionpanel-dev/lionwings/server/transfer"
+	"github.com/IvanX77/lionwings/environment"
+	"github.com/IvanX77/lionwings/router/middleware"
+	"github.com/IvanX77/lionwings/server"
+	"github.com/IvanX77/lionwings/server/installer"
+	"github.com/IvanX77/lionwings/server/transfer"
 )
 
 // Data passed over to initiate a server transfer.

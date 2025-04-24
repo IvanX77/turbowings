@@ -6,7 +6,7 @@ import (
 	"emperror.dev/errors"
 	"github.com/goccy/go-json"
 
-	"github.com/lionpanel-dev/lionwings/system"
+	"github.com/IvanX77/lionwings/system"
 )
 
 // Event represents an Event sent over a Bus.

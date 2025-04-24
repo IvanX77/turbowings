@@ -6,8 +6,8 @@ import (
 
 	"emperror.dev/errors"
 
-	"github.com/lionpanel-dev/lionwings/internal/database"
-	"github.com/lionpanel-dev/lionwings/internal/models"
+	"github.com/IvanX77/lionwings/internal/database"
+	"github.com/IvanX77/lionwings/internal/models"
 )
 
 const ActivityPowerPrefix = "server:power."

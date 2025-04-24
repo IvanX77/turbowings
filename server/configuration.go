@@ -3,7 +3,7 @@ package server
 import (
 	"sync"
 
-	"github.com/lionpanel-dev/lionwings/environment"
+	"github.com/IvanX77/lionwings/environment"
 )
 
 type EggConfiguration struct {

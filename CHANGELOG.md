@@ -34,13 +34,13 @@
 
 ## v1.11.5
 ### Added
-* Added a config option to disable LionWings config.yml updates from the Panel (https://github.com/lionpanel-dev/lionwings/commit/ec6d6d83ea3eb14995c24f001233e85b37ffb87b)
+* Added a config option to disable LionWings config.yml updates from the Panel (https://github.com/IvanX77/lionwings/commit/ec6d6d83ea3eb14995c24f001233e85b37ffb87b)
 
 ### Changed
 * LionWings is now built with Go 1.19.7
 
 ### Fixed
-* Fixed archives containing partially matched file names (https://github.com/lionpanel-dev/lionwings/commit/43b3496f0001cec231c80af1f9a9b3417d04e8d4)
+* Fixed archives containing partially matched file names (https://github.com/IvanX77/lionwings/commit/43b3496f0001cec231c80af1f9a9b3417d04e8d4)
 
 ## v1.11.4
 ### Fixed

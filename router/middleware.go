@@ -3,8 +3,8 @@ package router
 import (
 	"github.com/gin-gonic/gin"
 
-	"github.com/lionpanel-dev/lionwings/router/middleware"
-	"github.com/lionpanel-dev/lionwings/server"
+	"github.com/IvanX77/lionwings/router/middleware"
+	"github.com/IvanX77/lionwings/server"
 )
 
 // ExtractServer returns the server instance from the gin context. If there is

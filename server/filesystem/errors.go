@@ -7,7 +7,7 @@ import (
 	"emperror.dev/errors"
 	"github.com/apex/log"
 
-	"github.com/lionpanel-dev/lionwings/internal/ufs"
+	"github.com/IvanX77/lionwings/internal/ufs"
 )
 
 type ErrorCode string

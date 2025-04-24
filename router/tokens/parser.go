@@ -5,7 +5,7 @@ import (
 
 	"github.com/gbrlsnchs/jwt/v3"
 
-	"github.com/lionpanel-dev/lionwings/config"
+	"github.com/IvanX77/lionwings/config"
 )
 
 type TokenData interface {

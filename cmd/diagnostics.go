@@ -25,10 +25,10 @@ import (
 	"github.com/spf13/cobra"
 	dockerSystem "github.com/docker/docker/api/types/system" // Alias the correct system package
 
-	"github.com/lionpanel-dev/lionwings/config"
-	"github.com/lionpanel-dev/lionwings/environment"
-	"github.com/lionpanel-dev/lionwings/loggers/cli"
-	"github.com/lionpanel-dev/lionwings/system"
+	"github.com/IvanX77/lionwings/config"
+	"github.com/IvanX77/lionwings/environment"
+	"github.com/IvanX77/lionwings/loggers/cli"
+	"github.com/IvanX77/lionwings/system"
 )
 
 const (

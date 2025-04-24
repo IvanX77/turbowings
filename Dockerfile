@@ -8,7 +8,7 @@ COPY go.mod go.sum /app/
 RUN go mod download
 COPY . /app/
 RUN CGO_ENABLED=0 go build \
-    -ldflags="-s -w -X github.com/lionpanel-dev/lionwings/system.Version=$VERSION" \
+    -ldflags="-s -w -X github.com/IvanX77/lionwings/system.Version=$VERSION" \
     -v \
     -trimpath \
     -o lionwings \

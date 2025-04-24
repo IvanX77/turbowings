@@ -11,8 +11,8 @@ import (
 	"github.com/docker/docker/api/types/container"
 	"github.com/docker/docker/client"
 
-	"github.com/lionpanel-dev/lionwings/environment"
-	"github.com/lionpanel-dev/lionwings/remote"
+	"github.com/IvanX77/lionwings/environment"
+	"github.com/IvanX77/lionwings/remote"
 )
 
 // OnBeforeStart run before the container starts and get the process

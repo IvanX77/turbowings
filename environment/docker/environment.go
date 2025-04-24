@@ -11,10 +11,10 @@ import (
 	"github.com/docker/docker/api/types"
 	"github.com/docker/docker/client"
 
-	"github.com/lionpanel-dev/lionwings/environment"
-	"github.com/lionpanel-dev/lionwings/events"
-	"github.com/lionpanel-dev/lionwings/remote"
-	"github.com/lionpanel-dev/lionwings/system"
+	"github.com/IvanX77/lionwings/environment"
+	"github.com/IvanX77/lionwings/events"
+	"github.com/IvanX77/lionwings/remote"
+	"github.com/IvanX77/lionwings/system"
 )
 
 type Metadata struct {

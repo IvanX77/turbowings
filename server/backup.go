@@ -10,9 +10,9 @@ import (
 	"github.com/apex/log"
 	"github.com/docker/docker/client"
 
-	"github.com/lionpanel-dev/lionwings/environment"
-	"github.com/lionpanel-dev/lionwings/remote"
-	"github.com/lionpanel-dev/lionwings/server/backup"
+	"github.com/IvanX77/lionwings/environment"
+	"github.com/IvanX77/lionwings/remote"
+	"github.com/IvanX77/lionwings/server/backup"
 )
 
 // Notifies the panel of a backup's state and returns an error if one is encountered

@@ -12,9 +12,9 @@ import (
 
 	. "github.com/franela/goblin"
 
-	"github.com/lionpanel-dev/lionwings/internal/ufs"
+	"github.com/IvanX77/lionwings/internal/ufs"
 
-	"github.com/lionpanel-dev/lionwings/config"
+	"github.com/IvanX77/lionwings/config"
 )
 
 func NewFs() (*Filesystem, *rootFs) {

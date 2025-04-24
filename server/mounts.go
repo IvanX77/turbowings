@@ -7,8 +7,8 @@ import (
 
 	"github.com/apex/log"
 
-	"github.com/lionpanel-dev/lionwings/config"
-	"github.com/lionpanel-dev/lionwings/environment"
+	"github.com/IvanX77/lionwings/config"
+	"github.com/IvanX77/lionwings/environment"
 )
 
 // To avoid confusion when working with mounts, assume that a server.Mount has not been properly

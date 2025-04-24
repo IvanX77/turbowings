@@ -6,7 +6,7 @@ import (
 
 	"github.com/docker/go-connections/nat"
 
-	"github.com/lionpanel-dev/lionwings/config"
+	"github.com/IvanX77/lionwings/config"
 )
 
 // Defines the allocations available for a given server. When using the Docker environment

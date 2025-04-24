@@ -8,13 +8,13 @@ test:
 	go test -race ./...
 
 debug:
-	go build -ldflags="-X github.com/lionpanel-dev/lionwings/system.Version=$(GIT_HEAD)"
+	go build -ldflags="-X github.com/IvanX77/lionwings/system.Version=$(GIT_HEAD)"
 	sudo ./lionwings --debug --ignore-certificate-errors --config config.yml --pprof --pprof-block-rate 1
 
 # Runs a remotly debuggable session for LionWings allowing an IDE to connect and target
 # different breakpoints.
 rmdebug:
-	go build -gcflags "all=-N -l" -ldflags="-X github.com/lionpanel-dev/lionwings/system.Version=$(GIT_HEAD)" -race
+	go build -gcflags "all=-N -l" -ldflags="-X github.com/IvanX77/lionwings/system.Version=$(GIT_HEAD)" -race
 	sudo dlv --listen=:2345 --headless=true --api-version=2 --accept-multiclient exec ./lionwings -- --debug --ignore-certificate-errors --config config.yml
 
 cross-build: clean build compress

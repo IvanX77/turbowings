@@ -7,8 +7,8 @@ import (
 
 	"github.com/mitchellh/colorstring"
 
-	"github.com/lionpanel-dev/lionwings/config"
-	"github.com/lionpanel-dev/lionwings/system"
+	"github.com/IvanX77/lionwings/config"
+	"github.com/IvanX77/lionwings/system"
 )
 
 // appName is a local cache variable to avoid having to make expensive copies of

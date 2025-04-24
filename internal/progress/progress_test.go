@@ -6,7 +6,7 @@ import (
 
 	"github.com/franela/goblin"
 
-	"github.com/lionpanel-dev/lionwings/internal/progress"
+	"github.com/IvanX77/lionwings/internal/progress"
 )
 
 func TestProgress(t *testing.T) {

@@ -4,8 +4,8 @@ import (
 	"emperror.dev/errors"
 	"github.com/apex/log"
 
-	"github.com/lionpanel-dev/lionwings/internal/database"
-	"github.com/lionpanel-dev/lionwings/internal/models"
+	"github.com/IvanX77/lionwings/internal/database"
+	"github.com/IvanX77/lionwings/internal/models"
 )
 
 type eventHandler struct {

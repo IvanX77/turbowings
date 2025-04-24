@@ -4,7 +4,7 @@ import (
 	"context"
 	"time"
 
-	"github.com/lionpanel-dev/lionwings/events"
+	"github.com/IvanX77/lionwings/events"
 )
 
 const (

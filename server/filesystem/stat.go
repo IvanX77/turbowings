@@ -8,7 +8,7 @@ import (
 
 	"github.com/gabriel-vasile/mimetype"
 
-	"github.com/lionpanel-dev/lionwings/internal/ufs"
+	"github.com/IvanX77/lionwings/internal/ufs"
 )
 
 type Stat struct {
