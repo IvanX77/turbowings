@@ -12,10 +12,10 @@ import (
 	"github.com/gin-gonic/gin"
 	"github.com/google/uuid"
 
-	"github.com/IvanX77/lionwings/config"
-	"github.com/IvanX77/lionwings/remote"
-	"github.com/IvanX77/lionwings/server"
-	"github.com/IvanX77/lionwings/system"
+	"github.com/IvanX77/turbowings/config"
+	"github.com/IvanX77/turbowings/remote"
+	"github.com/IvanX77/turbowings/server"
+	"github.com/IvanX77/turbowings/system"
 )
 
 // AttachRequestID attaches a unique ID to the incoming HTTP request so that any
@@ -171,15 +171,15 @@ func RequireAuthorization() gin.HandlerFunc {
 		// token can be changed on the fly and the config.Get() call returns a copy, so
 		// if it is rotated this value will never properly get updated.
 		auth := strings.SplitN(c.GetHeader("Authorization"), " ", 2)
-		c.Header("User-Agent", fmt.Sprintf("LionPanel LionWings/v%s (id:%s)", system.Version, config.Get().AuthenticationTokenId))
+		c.Header("User-Agent", fmt.Sprintf("LionPanel TurboWings/v%s (id:%s)", system.Version, config.Get().AuthenticationTokenId))
 		if len(auth) != 2 || auth[0] != "Bearer" {
 			c.Header("WWW-Authenticate", "Bearer")
 			c.AbortWithStatusJSON(http.StatusUnauthorized, gin.H{"error": "The required authorization heads were not present in the request."})
 			return
 		}
 
-		// All requests to LionWings must be authorized with the authentication token present in
-		// the LionWings configuration file. Remeber, all requests to LionWings come from the Panel
+		// All requests to TurboWings must be authorized with the authentication token present in
+		// the TurboWings configuration file. Remeber, all requests to TurboWings come from the Panel
 		// backend, or using a signed JWT for temporary authentication.
 		if subtle.ConstantTimeCompare([]byte(auth[1]), []byte(config.Get().Token.Token)) != 1 {
 			c.AbortWithStatusJSON(http.StatusForbidden, gin.H{"error": "You are not authorized to access this endpoint."})

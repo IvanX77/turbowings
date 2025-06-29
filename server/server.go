@@ -17,16 +17,16 @@ import (
 	"github.com/creasty/defaults"
 	"github.com/goccy/go-json"
 
-	"github.com/IvanX77/lionwings/config"
-	"github.com/IvanX77/lionwings/environment"
-	"github.com/IvanX77/lionwings/events"
-	"github.com/IvanX77/lionwings/remote"
-	"github.com/IvanX77/lionwings/server/filesystem"
-	"github.com/IvanX77/lionwings/system"
+	"github.com/IvanX77/turbowings/config"
+	"github.com/IvanX77/turbowings/environment"
+	"github.com/IvanX77/turbowings/events"
+	"github.com/IvanX77/turbowings/remote"
+	"github.com/IvanX77/turbowings/server/filesystem"
+	"github.com/IvanX77/turbowings/system"
 )
 
 // Server is the high level definition for a server instance being controlled
-// by LionWings.
+// by TurboWings.
 type Server struct {
 	// Internal mutex used to block actions that need to occur sequentially, such as
 	// writing the configuration to the disk.
@@ -237,12 +237,12 @@ func (s *Server) Log() *log.Entry {
 	return log.WithField("server", s.ID())
 }
 
-// Sync syncs the state of the server on the Panel with LionWings. This ensures that
+// Sync syncs the state of the server on the Panel with TurboWings. This ensures that
 // we're always using the state of the server from the Panel and allows us to
-// not require successful API calls to LionWings to do things.
+// not require successful API calls to TurboWings to do things.
 //
 // This also means mass actions can be performed against servers on the Panel
-// and they will automatically sync with LionWings when the server is started.
+// and they will automatically sync with TurboWings when the server is started.
 func (s *Server) Sync() error {
 	cfg, err := s.client.GetServerConfiguration(s.Context(), s.ID())
 	if err != nil {
@@ -414,7 +414,7 @@ func (s *Server) IsRunning() bool {
 }
 
 // APIResponse is a type returned when requesting details about a single server
-// instance on LionWings. This includes the information needed by the Panel in order
+// instance on TurboWings. This includes the information needed by the Panel in order
 // to show resource utilization and the current state on this system.
 type APIResponse struct {
 	State         string        `json:"state"`

@@ -36,8 +36,8 @@
 /coverage.out
 
 # The built executable
-lionwings
-lionwings.exe
+turbowings
+turbowings.exe
 
 # IDE/Editor files (VS Code)
 /.vscode

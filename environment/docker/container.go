@@ -18,9 +18,9 @@ import (
 	"github.com/docker/docker/api/types/network"
 	"github.com/docker/docker/client"
 
-	"github.com/IvanX77/lionwings/config"
-	"github.com/IvanX77/lionwings/environment"
-	"github.com/IvanX77/lionwings/system"
+	"github.com/IvanX77/turbowings/config"
+	"github.com/IvanX77/turbowings/environment"
+	"github.com/IvanX77/turbowings/system"
 )
 
 var ErrNotAttached = errors.Sentinel("not attached to instance")
@@ -305,7 +305,7 @@ func (e *Environment) SendCommand(c string) error {
 
 	// If the command being processed is the same as the process stop command then we
 	// want to mark the server as entering the stopping state otherwise the process will
-	// stop and LionWings will think it has crashed and attempt to restart it.
+	// stop and TurboWings will think it has crashed and attempt to restart it.
 	if e.meta.Stop.Type == "command" && c == e.meta.Stop.Value {
 		e.SetState(environment.ProcessStoppingState)
 	}

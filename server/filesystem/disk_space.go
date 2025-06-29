@@ -8,7 +8,7 @@ import (
 	"emperror.dev/errors"
 	"github.com/apex/log"
 
-	"github.com/IvanX77/lionwings/internal/ufs"
+	"github.com/IvanX77/turbowings/internal/ufs"
 )
 
 type SpaceCheckingOpts struct {
@@ -181,7 +181,7 @@ func (fs *Filesystem) DirectorySize(root string) (int64, error) {
 		}
 
 		// TODO: detect if info is a hard-link and de-duplicate it.
-		// ref; https://github.com/IvanX77/lionwings/pull/181/files
+		// ref; https://github.com/IvanX77/turbowings/pull/181/files
 
 		size.Add(info.Size())
 		return nil

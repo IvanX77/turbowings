@@ -9,9 +9,9 @@ import (
 	"emperror.dev/errors"
 	"github.com/apex/log"
 
-	"github.com/IvanX77/lionwings/config"
-	"github.com/IvanX77/lionwings/environment"
-	"github.com/IvanX77/lionwings/internal/models"
+	"github.com/IvanX77/turbowings/config"
+	"github.com/IvanX77/turbowings/environment"
+	"github.com/IvanX77/turbowings/internal/models"
 
 )
 
@@ -43,7 +43,7 @@ func (cd *CrashHandler) SetLastCrash(t time.Time) {
 // This function assumes it is called under circumstances where a crash is suspected
 // of occurring. It will not do anything to determine if it was actually a crash, just
 // look at the exit state and check if it meets the criteria of being called a crash
-// by LionWings.
+// by TurboWings.
 //
 // If the server is determined to have crashed, the process will be restarted and the
 // counter for the server will be incremented.

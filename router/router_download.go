@@ -10,9 +10,9 @@ import (
 	"github.com/gin-gonic/gin"
 	"github.com/google/uuid"
 
-	"github.com/IvanX77/lionwings/router/middleware"
-	"github.com/IvanX77/lionwings/router/tokens"
-	"github.com/IvanX77/lionwings/server/backup"
+	"github.com/IvanX77/turbowings/router/middleware"
+	"github.com/IvanX77/turbowings/router/tokens"
+	"github.com/IvanX77/turbowings/server/backup"
 )
 
 // Handle a download request for a server backup.

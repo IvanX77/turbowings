@@ -17,7 +17,7 @@ import (
 	"github.com/goccy/go-json"
 	"github.com/google/uuid"
 
-	"github.com/IvanX77/lionwings/server"
+	"github.com/IvanX77/turbowings/server"
 )
 
 var client *http.Client
@@ -189,7 +189,7 @@ func (dl *Download) Execute() error {
 		return errors.WrapIf(err, "downloader: failed to create request")
 	}
 
-	req.Header.Set("User-Agent", "LionPanel Panel (https://lionpanel.dev)")
+	req.Header.Set("User-Agent", "LionPanel Panel (https://turbowings.dev)")
 	res, err := client.Do(req)
 	if err != nil {
 		return ErrDownloadFailed

@@ -8,16 +8,16 @@ import (
 	"github.com/apex/log"
 	"github.com/go-co-op/gocron/v2"
 
-	"github.com/IvanX77/lionwings/config"
-	"github.com/IvanX77/lionwings/server"
-	"github.com/IvanX77/lionwings/system"
+	"github.com/IvanX77/turbowings/config"
+	"github.com/IvanX77/turbowings/server"
+	"github.com/IvanX77/turbowings/system"
 )
 
 const ErrCronRunning = errors.Sentinel("cron: job already running")
 
 var o system.AtomicBool
 
-// Scheduler configures the internal cronjob system for LionWings and returns the scheduler
+// Scheduler configures the internal cronjob system for TurboWings and returns the scheduler
 // instance to the caller. This should only be called once per application lifecycle, additional
 // calls will result in an error being returned.
 func Scheduler(ctx context.Context, m *server.Manager) (gocron.Scheduler, error) {

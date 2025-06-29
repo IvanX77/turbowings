@@ -9,11 +9,11 @@ import (
 
 	"github.com/apex/log"
 
-	"github.com/IvanX77/lionwings/events"
-	"github.com/IvanX77/lionwings/system"
+	"github.com/IvanX77/turbowings/events"
+	"github.com/IvanX77/turbowings/system"
 
-	"github.com/IvanX77/lionwings/environment"
-	"github.com/IvanX77/lionwings/remote"
+	"github.com/IvanX77/turbowings/environment"
+	"github.com/IvanX77/turbowings/remote"
 )
 
 var dockerEvents = []string{

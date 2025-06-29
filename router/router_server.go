@@ -2,7 +2,7 @@ package router
 
 import (
 	"context"
-	"github.com/IvanX77/lionwings/config"
+	"github.com/IvanX77/turbowings/config"
 	"net/http"
 	"os"
 	"strconv"
@@ -11,11 +11,11 @@ import (
 	"github.com/apex/log"
 	"github.com/gin-gonic/gin"
 
-	"github.com/IvanX77/lionwings/router/downloader"
-	"github.com/IvanX77/lionwings/router/middleware"
-	"github.com/IvanX77/lionwings/router/tokens"
-	"github.com/IvanX77/lionwings/server"
-	"github.com/IvanX77/lionwings/server/transfer"
+	"github.com/IvanX77/turbowings/router/downloader"
+	"github.com/IvanX77/turbowings/router/middleware"
+	"github.com/IvanX77/turbowings/router/tokens"
+	"github.com/IvanX77/turbowings/server"
+	"github.com/IvanX77/turbowings/server/transfer"
 )
 
 // Returns a single server from the collection of servers.
@@ -189,7 +189,7 @@ func postServerReinstall(c *gin.Context) {
 	c.Status(http.StatusAccepted)
 }
 
-// Deletes a server from the lionwings daemon and dissociate its objects.
+// Deletes a server from the turbowings daemon and dissociate its objects.
 func deleteServer(c *gin.Context) {
 	s := middleware.ExtractServer(c)
 

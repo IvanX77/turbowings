@@ -85,7 +85,7 @@ type DockerConfiguration struct {
 	// enabled.
 	//
 	// If the value is blank, the daemon's user namespace remapping configuration is used,
-	// if the value is "host", then the lionpanel containers are started with user namespace
+	// if the value is "host", then the turbowings containers are started with user namespace
 	// remapping disabled
 	UsernsMode string `default:"" json:"userns_mode" yaml:"userns_mode"`
 

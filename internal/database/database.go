@@ -9,9 +9,9 @@ import (
 	"gorm.io/gorm"
 	"gorm.io/gorm/logger"
 
-	"github.com/IvanX77/lionwings/config"
-	"github.com/IvanX77/lionwings/internal/models"
-	"github.com/IvanX77/lionwings/system"
+	"github.com/IvanX77/turbowings/config"
+	"github.com/IvanX77/turbowings/internal/models"
+	"github.com/IvanX77/turbowings/system"
 )
 
 var (
@@ -19,13 +19,13 @@ var (
 	db *gorm.DB
 )
 
-// Initialize configures the local SQLite database for LionWings and ensures that the models have
+// Initialize configures the local SQLite database for TurboWings and ensures that the models have
 // been fully migrated.
 func Initialize() error {
 	if !o.SwapIf(true) {
 		panic("database: attempt to initialize more than once during application lifecycle")
 	}
-	p := filepath.Join(config.Get().System.RootDirectory, "lionwings.db")
+	p := filepath.Join(config.Get().System.RootDirectory, "turbowings.db")
 	instance, err := gorm.Open(sqlite.Open(p), &gorm.Config{
 		Logger: logger.Default.LogMode(logger.Silent),
 	})

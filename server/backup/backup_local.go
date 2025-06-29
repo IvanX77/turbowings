@@ -10,9 +10,9 @@ import (
 	"github.com/juju/ratelimit"
 	"github.com/mholt/archives"
 
-	"github.com/IvanX77/lionwings/config"
-	"github.com/IvanX77/lionwings/remote"
-	"github.com/IvanX77/lionwings/server/filesystem"
+	"github.com/IvanX77/turbowings/config"
+	"github.com/IvanX77/turbowings/remote"
+	"github.com/IvanX77/turbowings/server/filesystem"
 )
 
 type LocalBackup struct {

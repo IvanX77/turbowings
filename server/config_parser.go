@@ -8,7 +8,7 @@ import (
 	"strings"
 
 	"github.com/gammazero/workerpool"
-	"github.com/IvanX77/lionwings/internal/ufs"
+	"github.com/IvanX77/turbowings/internal/ufs"
 )
 
 // Helper function to replace variables in the file path of the configuration parser

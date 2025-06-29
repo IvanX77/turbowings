@@ -20,10 +20,10 @@ import (
 	"github.com/docker/docker/client"
 	"github.com/docker/docker/pkg/parsers/kernel"
 
-	"github.com/IvanX77/lionwings/config"
-	"github.com/IvanX77/lionwings/environment"
-	"github.com/IvanX77/lionwings/remote"
-	"github.com/IvanX77/lionwings/system"
+	"github.com/IvanX77/turbowings/config"
+	"github.com/IvanX77/turbowings/environment"
+	"github.com/IvanX77/turbowings/remote"
+	"github.com/IvanX77/turbowings/system"
 )
 
 // Install executes the installation stack for a server process. Bubbles any
@@ -459,7 +459,7 @@ func (ip *InstallationProcess) Execute() (string, error) {
 
 	// Ensure the root directory for the server exists properly before attempting
 	// to trigger the reinstall of the server. It is possible the directory would
-	// not exist when this runs if LionWings boots with a missing directory and a user
+	// not exist when this runs if TurboWings boots with a missing directory and a user
 	// triggers a reinstall before trying to start the server.
 	if err := ip.Server.EnsureDataDirectoryExists(); err != nil {
 		return "", err

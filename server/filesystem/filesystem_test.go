@@ -12,9 +12,9 @@ import (
 
 	. "github.com/franela/goblin"
 
-	"github.com/IvanX77/lionwings/internal/ufs"
+	"github.com/IvanX77/turbowings/internal/ufs"
 
-	"github.com/IvanX77/lionwings/config"
+	"github.com/IvanX77/turbowings/config"
 )
 
 func NewFs() (*Filesystem, *rootFs) {
@@ -26,7 +26,7 @@ func NewFs() (*Filesystem, *rootFs) {
 		},
 	})
 
-	tmpDir, err := os.MkdirTemp(os.TempDir(), "lionpanel")
+	tmpDir, err := os.MkdirTemp(os.TempDir(), "turbowings")
 	if err != nil {
 		panic(err)
 		return nil, nil

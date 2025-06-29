@@ -14,9 +14,9 @@ import (
 	"github.com/mholt/archives"
 	"golang.org/x/sync/errgroup"
 
-	"github.com/IvanX77/lionwings/config"
-	"github.com/IvanX77/lionwings/remote"
-	"github.com/IvanX77/lionwings/server/filesystem"
+	"github.com/IvanX77/turbowings/config"
+	"github.com/IvanX77/turbowings/remote"
+	"github.com/IvanX77/turbowings/server/filesystem"
 )
 
 var format = archives.CompressedArchive{
@@ -28,7 +28,7 @@ var format = archives.CompressedArchive{
 type AdapterType string
 
 const (
-	LocalBackupAdapter AdapterType = "lionwings"
+	LocalBackupAdapter AdapterType = "turbowings"
 	S3BackupAdapter    AdapterType = "s3"
 )
 

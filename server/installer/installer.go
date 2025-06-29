@@ -5,8 +5,8 @@ import (
 	"emperror.dev/errors"
 	"github.com/asaskevich/govalidator"
 
-	"github.com/IvanX77/lionwings/remote"
-	"github.com/IvanX77/lionwings/server"
+	"github.com/IvanX77/turbowings/remote"
+	"github.com/IvanX77/turbowings/server"
 )
 
 type Installer struct {

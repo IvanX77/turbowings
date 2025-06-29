@@ -26,10 +26,10 @@ import (
 	"golang.org/x/sys/unix"
 	"gopkg.in/yaml.v2"
 
-	"github.com/IvanX77/lionwings/system"
+	"github.com/IvanX77/turbowings/system"
 )
 
-const DefaultLocation = "/etc/lionpanel/config.yml"
+const DefaultLocation = "/etc/turbowings/config.yml"
 
 // DefaultTLSConfig sets sane defaults to use when configuring the internal
 // webserver to listen for public connections.
@@ -73,7 +73,7 @@ type SftpConfiguration struct {
 }
 
 // ApiConfiguration defines the configuration for the internal API that is
-// exposed by the LionWings webserver.
+// exposed by the TurboWings webserver.
 type ApiConfiguration struct {
 	// The interface that the internal webserver should bind to.
 	Host string `default:"0.0.0.0" yaml:"host"`
@@ -101,9 +101,9 @@ type ApiConfiguration struct {
 }
 
 // RemoteQueryConfiguration defines the configuration settings for remote requests
-// from LionWings to the Panel.
+// from TurboWings to the Panel.
 type RemoteQueryConfiguration struct {
-	// The amount of time in seconds that LionWings should allow for a request to the Panel API
+	// The amount of time in seconds that TurboWings should allow for a request to the Panel API
 	// to complete. If this time passes the request will be marked as failed. If your requests
 	// are taking longer than 30 seconds to complete it is likely a performance issue that
 	// should be resolved on the Panel, and not something that should be resolved by upping this
@@ -111,7 +111,7 @@ type RemoteQueryConfiguration struct {
 	Timeout int `default:"30" yaml:"timeout"`
 
 	// The number of servers to load in a single request to the Panel API when booting the
-	// LionWings instance. A single request is initially made to the Panel to get this number
+	// TurboWings instance. A single request is initially made to the Panel to get this number
 	// of servers, and then the pagination status is checked and additional requests are
 	// fired off in parallel to request the remaining pages.
 	//
@@ -124,33 +124,33 @@ type RemoteQueryConfiguration struct {
 
 // SystemConfiguration defines basic system configuration settings.
 type SystemConfiguration struct {
-	// The root directory where all of the lionpanel data is stored at.
-	RootDirectory string `default:"/var/lib/lionpanel" json:"-" yaml:"root_directory"`
+	// The root directory where all of the turbowings data is stored at.
+	RootDirectory string `default:"/var/lib/turbowings" json:"-" yaml:"root_directory"`
 
-	// Directory where logs for server installations and other lionwings events are logged.
-	LogDirectory string `default:"/var/log/lionpanel" json:"-" yaml:"log_directory"`
+	// Directory where logs for server installations and other turbowings events are logged.
+	LogDirectory string `default:"/var/log/turbowings" json:"-" yaml:"log_directory"`
 
 	// Directory where the server data is stored at.
-	Data string `default:"/var/lib/lionpanel/volumes" json:"-" yaml:"data"`
+	Data string `default:"/var/lib/turbowings/volumes" json:"-" yaml:"data"`
 
 	// Directory where server archives for transferring will be stored.
-	ArchiveDirectory string `default:"/var/lib/lionpanel/archives" json:"-" yaml:"archive_directory"`
+	ArchiveDirectory string `default:"/var/lib/turbowings/archives" json:"-" yaml:"archive_directory"`
 
 	// Directory where local backups will be stored on the machine.
-	BackupDirectory string `default:"/var/lib/lionpanel/backups" json:"-" yaml:"backup_directory"`
+	BackupDirectory string `default:"/var/lib/turbowings/backups" json:"-" yaml:"backup_directory"`
 
-	// TmpDirectory specifies where temporary files for lionpanel installation processes
+	// TmpDirectory specifies where temporary files for turbowings installation processes
 	// should be created. This supports environments running docker-in-docker.
-	TmpDirectory string `default:"/tmp/lionpanel" json:"-" yaml:"tmp_directory"`
+	TmpDirectory string `default:"/tmp/turbowings" json:"-" yaml:"tmp_directory"`
 
 	// The user that should own all of the server files, and be used for containers.
-	Username string `default:"lionpanel" yaml:"username"`
+	Username string `default:"turbowings" yaml:"username"`
 
-	// The timezone for this LionWings instance. This is detected by LionWings automatically if possible,
+	// The timezone for this TurboWings instance. This is detected by TurboWings automatically if possible,
 	// and falls back to UTC if not able to be detected. If you need to set this manually, that
 	// can also be done.
 	//
-	// This timezone value is passed into all containers created by LionWings.
+	// This timezone value is passed into all containers created by TurboWings.
 	Timezone string `yaml:"timezone"`
 
 	// Definitions for the user that gets created to ensure that we can quickly access
@@ -162,11 +162,11 @@ type SystemConfiguration struct {
 			Enabled bool `yaml:"enabled" default:"false"`
 			// ContainerUID controls the UID of the user inside the container.
 			// This should likely be set to 0 so the container runs as the user
-			// running LionWings.
+			// running TurboWings.
 			ContainerUID int `yaml:"container_uid" default:"0"`
 			// ContainerGID controls the GID of the user inside the container.
 			// This should likely be set to 0 so the container runs as the user
-			// running LionWings.
+			// running TurboWings.
 			ContainerGID int `yaml:"container_gid" default:"0"`
 		} `yaml:"rootless"`
 
@@ -176,12 +176,12 @@ type SystemConfiguration struct {
 		// Passwd controls weather a passwd file is mounted in the container
 		// at /etc/passwd to resolve missing user issues
 		Passwd     bool   `json:"mount_passwd" yaml:"mount_passwd" default:"true"`
-		PasswdFile string `json:"passwd_file" yaml:"passwd_file" default:"/etc/lionpanel/passwd"`
+		PasswdFile string `json:"passwd_file" yaml:"passwd_file" default:"/etc/turbowings/passwd"`
 	} `yaml:"user"`
 
 	// The amount of time in seconds that can elapse before a server's disk space calculation is
 	// considered stale and a re-check should occur. DANGER: setting this value too low can seriously
-	// impact system performance and cause massive I/O bottlenecks and high CPU usage for the LionWings
+	// impact system performance and cause massive I/O bottlenecks and high CPU usage for the TurboWings
 	// process.
 	//
 	// Set to 0 to disable disk checking entirely. This will always return 0 for the disk space used
@@ -204,7 +204,7 @@ type SystemConfiguration struct {
 	// frequently modifying a servers' files.
 	CheckPermissionsOnBoot bool `default:"true" yaml:"check_permissions_on_boot"`
 
-	// If set to false LionWings will not attempt to write a log rotate configuration to the disk
+	// If set to false TurboWings will not attempt to write a log rotate configuration to the disk
 	// when it boots and one is not detected.
 	EnableLogRotate bool `default:"true" yaml:"enable_log_rotate"`
 
@@ -229,8 +229,8 @@ type CrashDetection struct {
 	// CrashDetectionEnabled sets if crash detection is enabled globally for all servers on this node.
 	CrashDetectionEnabled bool `default:"true" yaml:"enabled"`
 
-	// Determines if LionWings should detect a server that stops with a normal exit code of
-	// "0" as being crashed if the process stopped without any LionWings interaction. E.g.
+	// Determines if TurboWings should detect a server that stops with a normal exit code of
+	// "0" as being crashed if the process stopped without any TurboWings interaction. E.g.
 	// the user did not press the stop button, but the process stopped cleanly.
 	DetectCleanExitAsCrash bool `default:"true" yaml:"detect_clean_exit_as_crash"`
 
@@ -251,7 +251,7 @@ type Backups struct {
 	// Defaults to 0 (unlimited)
 	WriteLimit int `default:"0" yaml:"write_limit"`
 
-	// CompressionLevel determines how much backups created by lionwings should be compressed.
+	// CompressionLevel determines how much backups created by turbowings should be compressed.
 	//
 	// "none" -> no compression will be applied
 	// "best_speed" -> uses gzip level 1 for fast speed
@@ -299,11 +299,11 @@ type Configuration struct {
 	// The location from which this configuration instance was instantiated.
 	path string
 
-	// Determines if lionwings should be running in debug mode. This value is ignored
+	// Determines if turbowings should be running in debug mode. This value is ignored
 	// if the debug flag is passed through the command line arguments.
 	Debug bool
 
-	AppName string `default:"lionpanel" json:"app_name" yaml:"app_name"`
+	AppName string `default:"turbowings" json:"app_name" yaml:"app_name"`
 
 	// A unique identifier for this node in the Panel.
 	Uuid string
@@ -346,7 +346,7 @@ type Configuration struct {
 
 	// AllowCORSPrivateNetwork sets the `Access-Control-Request-Private-Network` header which
 	// allows client browsers to make requests to internal IP addresses over HTTP.  This setting
-	// is only required by users running LionWings without SSL certificates and using internal IP
+	// is only required by users running TurboWings without SSL certificates and using internal IP
 	// addresses in order to connect. Most users should NOT enable this setting.
 	AllowCORSPrivateNetwork bool `json:"allow_cors_private_network" yaml:"allow_cors_private_network"`
 
@@ -478,9 +478,9 @@ func EnsurePelicanUser() error {
 		return err
 	}
 
-	// Our way of detecting if lionwings is running inside of Docker.
+	// Our way of detecting if turbowings is running inside of Docker.
 	if sysName == "distroless" {
-		_config.System.Username = system.FirstNotEmpty(os.Getenv("WINGS_USERNAME"), "lionpanel")
+		_config.System.Username = system.FirstNotEmpty(os.Getenv("WINGS_USERNAME"), "turbowings")
 		_config.System.User.Uid = system.MustInt(system.FirstNotEmpty(os.Getenv("WINGS_UID"), "988"))
 		_config.System.User.Gid = system.MustInt(system.FirstNotEmpty(os.Getenv("WINGS_GID"), "988"))
 		return nil
@@ -498,7 +498,7 @@ func EnsurePelicanUser() error {
 		return nil
 	}
 
-	log.WithField("username", _config.System.Username).Info("checking for lionpanel system user")
+	log.WithField("username", _config.System.Username).Info("checking for turbowings system user")
 	u, err := user.Lookup(_config.System.Username)
 	// If an error is returned but it isn't the unknown user error just abort
 	// the process entirely. If we did find a user, return it immediately.
@@ -637,7 +637,7 @@ func ConfigureDirectories() error {
 	return nil
 }
 
-// EnableLogRotation writes a logrotate file for lionwings to the system logrotate
+// EnableLogRotation writes a logrotate file for turbowings to the system logrotate
 // configuration directory if one exists and a logrotate file is not found. This
 // allows us to basically automate away the log rotation for most installs, but
 // also enable users to make modifications on their own.
@@ -645,7 +645,7 @@ func ConfigureDirectories() error {
 // This function IS NOT thread-safe.
 func EnableLogRotation() error {
 	if !_config.System.EnableLogRotate {
-		log.Info("skipping log rotate configuration, disabled in lionwings config file")
+		log.Info("skipping log rotate configuration, disabled in turbowings config file")
 		return nil
 	}
 
@@ -654,21 +654,21 @@ func EnableLogRotation() error {
 	} else if (err != nil && os.IsNotExist(err)) || !st.IsDir() {
 		return nil
 	}
-	if _, err := os.Stat("/etc/logrotate.d/lionwings"); err == nil || !os.IsNotExist(err) {
+	if _, err := os.Stat("/etc/logrotate.d/turbowings"); err == nil || !os.IsNotExist(err) {
 		return err
 	}
 
 	log.Info("no log rotation configuration found: adding file now")
 	// If we've gotten to this point it means the logrotate directory exists on the system
-	// but there is not a file for lionwings already. In that case, let us write a new file to
+	// but there is not a file for turbowings already. In that case, let us write a new file to
 	// it so files can be rotated easily.
-	f, err := os.Create("/etc/logrotate.d/lionwings")
+	f, err := os.Create("/etc/logrotate.d/turbowings")
 	if err != nil {
 		return err
 	}
 	defer f.Close()
 
-	t, err := template.New("logrotate").Parse(`{{.LogDirectory}}/lionwings.log {
+	t, err := template.New("logrotate").Parse(`{{.LogDirectory}}/turbowings.log {
     size 10M
     compress
     delaycompress
@@ -677,7 +677,7 @@ func EnableLogRotation() error {
     missingok
     notifempty
     postrotate
-        /usr/bin/systemctl kill -s HUP lionwings.service >/dev/null 2>&1 || true
+        /usr/bin/systemctl kill -s HUP turbowings.service >/dev/null 2>&1 || true
     endscript
 }`)
 	if err != nil {
@@ -714,7 +714,7 @@ func ConfigureTimezone() error {
 			defer cancel()
 			// Okay, file isn't found on this OS, we will try using timedatectl to handle this. If this
 			// command fails, exit, but if it returns a value use that. If no value is returned we will
-			// fall through to UTC to get LionWings booted at least.
+			// fall through to UTC to get TurboWings booted at least.
 			out, err := exec.CommandContext(ctx, "timedatectl").Output()
 			if err != nil {
 				log.WithField("error", err).Warn("failed to execute \"timedatectl\" to determine system timezone, falling back to UTC")

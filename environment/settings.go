@@ -8,7 +8,7 @@ import (
 	"github.com/apex/log"
 	"github.com/docker/docker/api/types/container"
 
-	"github.com/IvanX77/lionwings/config"
+	"github.com/IvanX77/turbowings/config"
 )
 
 type Mount struct {

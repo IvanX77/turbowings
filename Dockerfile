@@ -8,18 +8,18 @@ COPY go.mod go.sum /app/
 RUN go mod download
 COPY . /app/
 RUN CGO_ENABLED=0 go build \
-    -ldflags="-s -w -X github.com/IvanX77/lionwings/system.Version=$VERSION" \
+    -ldflags="-s -w -X github.com/IvanX77/turbowings/system.Version=$VERSION" \
     -v \
     -trimpath \
-    -o lionwings \
-    lionwings.go
+    -o turbowings \
+    turbowings.go
 RUN echo "ID=\"distroless\"" > /etc/os-release
 
 # Stage 2 (Final)
 FROM gcr.io/distroless/static:latest
 COPY --from=builder /etc/os-release /etc/os-release
 
-COPY --from=builder /app/lionwings /usr/bin/
-CMD [ "/usr/bin/lionwings", "--config", "/etc/lionpanel/config.yml" ]
+COPY --from=builder /app/turbowings /usr/bin/
+CMD [ "/usr/bin/turbowings", "--config", "/etc/turbowings/config.yml" ]
 
 EXPOSE 8080

@@ -8,8 +8,8 @@ import (
 	"emperror.dev/errors"
 	"github.com/google/uuid"
 
-	"github.com/IvanX77/lionwings/config"
-	"github.com/IvanX77/lionwings/environment"
+	"github.com/IvanX77/turbowings/config"
+	"github.com/IvanX77/turbowings/environment"
 )
 
 type PowerAction string

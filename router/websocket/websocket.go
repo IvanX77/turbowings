@@ -8,7 +8,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/IvanX77/lionwings/internal/models"
+	"github.com/IvanX77/turbowings/internal/models"
 
 	"emperror.dev/errors"
 	"github.com/apex/log"
@@ -18,13 +18,13 @@ import (
 	"github.com/google/uuid"
 	"github.com/gorilla/websocket"
 
-	"github.com/IvanX77/lionwings/system"
+	"github.com/IvanX77/turbowings/system"
 
-	"github.com/IvanX77/lionwings/config"
-	"github.com/IvanX77/lionwings/environment"
-	"github.com/IvanX77/lionwings/environment/docker"
-	"github.com/IvanX77/lionwings/router/tokens"
-	"github.com/IvanX77/lionwings/server"
+	"github.com/IvanX77/turbowings/config"
+	"github.com/IvanX77/turbowings/environment"
+	"github.com/IvanX77/turbowings/environment/docker"
+	"github.com/IvanX77/turbowings/router/tokens"
+	"github.com/IvanX77/turbowings/server"
 )
 
 const (

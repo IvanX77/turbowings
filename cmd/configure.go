@@ -16,7 +16,7 @@ import (
 	"github.com/goccy/go-json"
 	"github.com/spf13/cobra"
 
-	"github.com/IvanX77/lionwings/config"
+	"github.com/IvanX77/turbowings/config"
 )
 
 var configureArgs struct {
@@ -32,7 +32,7 @@ var nodeIdRegex = regexp.MustCompile(`^(\d+)$`)
 
 var configureCmd = &cobra.Command{
 	Use:   "configure",
-	Short: "Use a token to configure lionwings automatically",
+	Short: "Use a token to configure turbowings automatically",
 	Run:   configureCmdRun,
 }
 
@@ -162,7 +162,7 @@ func configureCmdRun(cmd *cobra.Command, args []string) {
 		panic(err)
 	}
 
-	fmt.Println("Successfully configured lionwings.")
+	fmt.Println("Successfully configured turbowings.")
 }
 
 func getRequest() (*http.Request, error) {

@@ -17,8 +17,8 @@ import (
 	"github.com/gabriel-vasile/mimetype"
 	ignore "github.com/sabhiram/go-gitignore"
 
-	"github.com/IvanX77/lionwings/config"
-	"github.com/IvanX77/lionwings/internal/ufs"
+	"github.com/IvanX77/turbowings/config"
+	"github.com/IvanX77/turbowings/internal/ufs"
 )
 
 type Filesystem struct {
@@ -242,7 +242,7 @@ func (fs *Filesystem) Chown(p string) error {
 		return nil
 	}
 
-	// This walker is probably some of the most efficient code in LionWings. It has
+	// This walker is probably some of the most efficient code in TurboWings. It has
 	// an internally re-used buffer for listing directory entries and doesn't
 	// need to check if every individual path it touches is safe as the code
 	// doesn't traverse symlinks, is immune to symlink timing attacks, and

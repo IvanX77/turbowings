@@ -9,14 +9,14 @@ import (
 	"github.com/apex/log"
 	"github.com/gin-gonic/gin"
 
-	"github.com/IvanX77/lionwings/config"
-	"github.com/IvanX77/lionwings/router/middleware"
-	"github.com/IvanX77/lionwings/server"
-	"github.com/IvanX77/lionwings/server/installer"
-	"github.com/IvanX77/lionwings/system"
+	"github.com/IvanX77/turbowings/config"
+	"github.com/IvanX77/turbowings/router/middleware"
+	"github.com/IvanX77/turbowings/server"
+	"github.com/IvanX77/turbowings/server/installer"
+	"github.com/IvanX77/turbowings/system"
 )
 
-// Returns information about the system that lionwings is running on.
+// Returns information about the system that turbowings is running on.
 func getSystemInformation(c *gin.Context) {
 	i, err := system.GetSystemInformation()
 	if err != nil {
@@ -54,7 +54,7 @@ func getSystemIps(c *gin.Context) {
 	c.JSON(http.StatusOK, i)
 }
 
-// Returns resource utilization info for the system lionwings is running on.
+// Returns resource utilization info for the system turbowings is running on.
 func getSystemUtilization(c *gin.Context) {
 	cfg := config.Get()
 	u, err := system.GetSystemUtilization(
@@ -93,7 +93,7 @@ func pruneDockerImages(c *gin.Context) {
 }
 
 // Returns all the servers that are registered and configured correctly on
-// this lionwings instance.
+// this turbowings instance.
 func getAllServers(c *gin.Context) {
 	servers := middleware.ExtractManager(c).All()
 	out := make([]server.APIResponse, len(servers), len(servers))
@@ -103,7 +103,7 @@ func getAllServers(c *gin.Context) {
 	c.JSON(http.StatusOK, out)
 }
 
-// Creates a new server on the lionwings daemon and begins the installation process
+// Creates a new server on the turbowings daemon and begins the installation process
 // for it.
 func postCreateServer(c *gin.Context) {
 	manager := middleware.ExtractManager(c)
@@ -165,7 +165,7 @@ type postUpdateConfigurationResponse struct {
 	Applied bool `json:"applied"`
 }
 
-// Updates the running configuration for this LionWings instance.
+// Updates the running configuration for this TurboWings instance.
 func postUpdateConfiguration(c *gin.Context) {
 	cfg := config.Get()
 

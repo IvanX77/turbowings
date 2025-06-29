@@ -11,10 +11,10 @@ import (
 	"github.com/docker/docker/api/types"
 	"github.com/docker/docker/client"
 
-	"github.com/IvanX77/lionwings/environment"
-	"github.com/IvanX77/lionwings/events"
-	"github.com/IvanX77/lionwings/remote"
-	"github.com/IvanX77/lionwings/system"
+	"github.com/IvanX77/turbowings/environment"
+	"github.com/IvanX77/turbowings/events"
+	"github.com/IvanX77/turbowings/remote"
+	"github.com/IvanX77/turbowings/system"
 )
 
 type Metadata struct {
@@ -150,7 +150,7 @@ func (e *Environment) ExitState() (uint32, bool, error) {
 	c, err := e.ContainerInspect(context.Background())
 	if err != nil {
 		// I'm not entirely sure how this can happen to be honest. I tried deleting a
-		// container _while_ a server was running and lionwings gracefully saw the crash and
+		// container _while_ a server was running and turbowings gracefully saw the crash and
 		// created a new container for it.
 		//
 		// However, someone reported an error in Discord about this scenario happening,

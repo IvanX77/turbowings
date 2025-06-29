@@ -11,8 +11,8 @@ import (
 	"github.com/docker/docker/api/types/container"
 	"github.com/docker/docker/client"
 
-	"github.com/IvanX77/lionwings/environment"
-	"github.com/IvanX77/lionwings/remote"
+	"github.com/IvanX77/turbowings/environment"
+	"github.com/IvanX77/turbowings/remote"
 )
 
 // OnBeforeStart run before the container starts and get the process
@@ -21,7 +21,7 @@ import (
 // an egg available for server processes.
 //
 // This process will also confirm that the server environment exists and is in
-// a bootable state. This ensures that unexpected container deletion while LionWings
+// a bootable state. This ensures that unexpected container deletion while TurboWings
 // is running does not result in the server becoming un-bootable.
 func (e *Environment) OnBeforeStart(ctx context.Context) error {
 	// Always destroy and re-create the server container to ensure that synced data from the Panel is used.

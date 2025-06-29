@@ -40,9 +40,9 @@ jobs:
           GOOS: ${{ matrix.goos }}
           GOARCH: ${{ matrix.goarch }}
           CGO_ENABLED: 0
-          SRC_PATH: github.com/IvanX77/lionwings
+          SRC_PATH: github.com/IvanX77/turbowings
         run: |
-          go build -v -trimpath -ldflags="-s -w -X ${SRC_PATH}/system.Version=dev-${GITHUB_SHA:0:7}" -o dist/lionwings ${SRC_PATH}
+          go build -v -trimpath -ldflags="-s -w -X ${SRC_PATH}/system.Version=dev-${GITHUB_SHA:0:7}" -o dist/turbowings ${SRC_PATH}
           go build -v -trimpath -ldflags="-X ${SRC_PATH}/system.Version=dev-${GITHUB_SHA:0:7}" -o dist/wings_debug ${SRC_PATH}
           chmod 755 dist/*
 
@@ -65,7 +65,7 @@ jobs:
         if: ${{ (github.ref == 'refs/heads/main' || github.event_name == 'pull_request') && matrix.go == '1.23.7' }}
         with:
           name: wings_linux_${{ matrix.goarch }}
-          path: dist/lionwings
+          path: dist/turbowings
 
       - name: Upload Debug Artifact
         uses: actions/upload-artifact@v4

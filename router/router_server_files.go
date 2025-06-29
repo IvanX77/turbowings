@@ -18,13 +18,13 @@ import (
 	"github.com/gin-gonic/gin"
 	"golang.org/x/sync/errgroup"
 
-	"github.com/IvanX77/lionwings/config"
-	"github.com/IvanX77/lionwings/internal/models"
-	"github.com/IvanX77/lionwings/router/downloader"
-	"github.com/IvanX77/lionwings/router/middleware"
-	"github.com/IvanX77/lionwings/router/tokens"
-	"github.com/IvanX77/lionwings/server"
-	"github.com/IvanX77/lionwings/server/filesystem"
+	"github.com/IvanX77/turbowings/config"
+	"github.com/IvanX77/turbowings/internal/models"
+	"github.com/IvanX77/turbowings/router/downloader"
+	"github.com/IvanX77/turbowings/router/middleware"
+	"github.com/IvanX77/turbowings/router/tokens"
+	"github.com/IvanX77/turbowings/server"
+	"github.com/IvanX77/turbowings/server/filesystem"
 )
 
 // getServerFileContents returns the contents of a file on the server.
@@ -481,7 +481,7 @@ func postServerDecompressFiles(c *gin.Context) {
 	if err != nil {
 		if filesystem.IsErrorCode(err, filesystem.ErrCodeUnknownArchive) {
 			lg.WithField("error", err).Warn("failed to decompress file: unknown archive format")
-			c.AbortWithStatusJSON(http.StatusBadRequest, gin.H{"error": "The archive provided is in a format LionWings does not understand."})
+			c.AbortWithStatusJSON(http.StatusBadRequest, gin.H{"error": "The archive provided is in a format TurboWings does not understand."})
 			return
 		}
 		middleware.CaptureAndAbort(c, err)

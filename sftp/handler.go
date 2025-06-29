@@ -12,9 +12,9 @@ import (
 	"github.com/pkg/sftp"
 	"golang.org/x/crypto/ssh"
 
-	"github.com/IvanX77/lionwings/config"
-	"github.com/IvanX77/lionwings/server"
-	"github.com/IvanX77/lionwings/server/filesystem"
+	"github.com/IvanX77/turbowings/config"
+	"github.com/IvanX77/turbowings/server"
+	"github.com/IvanX77/turbowings/server/filesystem"
 )
 
 const (
@@ -40,7 +40,7 @@ type Handler struct {
 func NewHandler(sc *ssh.ServerConn, srv *server.Server) (*Handler, error) {
 	uuid, ok := sc.Permissions.Extensions["user"]
 	if !ok {
-		return nil, errors.New("sftp: mismatched LionWings and Panel versions — Panel 1.10 is required for this version of LionWings.")
+		return nil, errors.New("sftp: mismatched TurboWings and Panel versions — Panel 1.10 is required for this version of TurboWings.")
 	}
 
 	events := eventHandler{

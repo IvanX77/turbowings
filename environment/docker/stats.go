@@ -10,7 +10,7 @@ import (
 	"github.com/docker/docker/api/types/container"
 	"github.com/goccy/go-json"
 
-	"github.com/IvanX77/lionwings/environment"
+	"github.com/IvanX77/turbowings/environment"
 )
 
 // Uptime returns the current uptime of the container in milliseconds. If the

@@ -7,11 +7,11 @@ import (
 
 	"github.com/gin-gonic/gin"
 
-	"github.com/IvanX77/lionwings/config"
-	"github.com/IvanX77/lionwings/internal/ufs"
-	"github.com/IvanX77/lionwings/router/middleware"
-	"github.com/IvanX77/lionwings/server"
-	"github.com/IvanX77/lionwings/server/filesystem"
+	"github.com/IvanX77/turbowings/config"
+	"github.com/IvanX77/turbowings/internal/ufs"
+	"github.com/IvanX77/turbowings/router/middleware"
+	"github.com/IvanX77/turbowings/server"
+	"github.com/IvanX77/turbowings/server/filesystem"
 )
 
 // Structs needed to respond with the matched files and all their info

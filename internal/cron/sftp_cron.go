@@ -7,10 +7,10 @@ import (
 	"emperror.dev/errors"
 	"gorm.io/gorm"
 
-	"github.com/IvanX77/lionwings/internal/database"
-	"github.com/IvanX77/lionwings/internal/models"
-	"github.com/IvanX77/lionwings/server"
-	"github.com/IvanX77/lionwings/system"
+	"github.com/IvanX77/turbowings/internal/database"
+	"github.com/IvanX77/turbowings/internal/models"
+	"github.com/IvanX77/turbowings/server"
+	"github.com/IvanX77/turbowings/system"
 )
 
 type sftpCron struct {

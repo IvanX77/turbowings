@@ -7,8 +7,8 @@ import (
 
 	"github.com/mitchellh/colorstring"
 
-	"github.com/IvanX77/lionwings/config"
-	"github.com/IvanX77/lionwings/system"
+	"github.com/IvanX77/turbowings/config"
+	"github.com/IvanX77/turbowings/system"
 )
 
 // appName is a local cache variable to avoid having to make expensive copies of
@@ -18,7 +18,7 @@ var appName string
 var appNameSync sync.Once
 
 // PublishConsoleOutputFromDaemon sends output to the server console formatted
-// to appear correctly as being sent from LionWings.
+// to appear correctly as being sent from TurboWings.
 func (s *Server) PublishConsoleOutputFromDaemon(data string) {
 	appNameSync.Do(func() {
 		appName = config.Get().AppName

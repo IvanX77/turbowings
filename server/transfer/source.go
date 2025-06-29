@@ -11,7 +11,7 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/IvanX77/lionwings/internal/progress"
+	"github.com/IvanX77/turbowings/internal/progress"
 )
 
 // PushArchiveToTarget POSTs the archive to the target node and returns the

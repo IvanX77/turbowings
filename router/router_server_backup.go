@@ -9,9 +9,9 @@ import (
 	"github.com/apex/log"
 	"github.com/gin-gonic/gin"
 
-	"github.com/IvanX77/lionwings/router/middleware"
-	"github.com/IvanX77/lionwings/server"
-	"github.com/IvanX77/lionwings/server/backup"
+	"github.com/IvanX77/turbowings/router/middleware"
+	"github.com/IvanX77/turbowings/server"
+	"github.com/IvanX77/turbowings/server/backup"
 )
 
 // postServerBackup performs a backup against a given server instance using the
@@ -71,7 +71,7 @@ func postServerRestoreBackup(c *gin.Context) {
 	logger := middleware.ExtractLogger(c)
 
 	var data struct {
-		Adapter           backup.AdapterType `binding:"required,oneof=lionwings s3" json:"adapter"`
+		Adapter           backup.AdapterType `binding:"required,oneof=turbowings s3" json:"adapter"`
 		TruncateDirectory bool               `json:"truncate_directory"`
 		// A UUID is always required for this endpoint, however the download URL
 		// is only present when the given adapter type is s3.

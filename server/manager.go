@@ -15,11 +15,11 @@ import (
 	"github.com/gammazero/workerpool"
 	"github.com/goccy/go-json"
 
-	"github.com/IvanX77/lionwings/config"
-	"github.com/IvanX77/lionwings/environment"
-	"github.com/IvanX77/lionwings/environment/docker"
-	"github.com/IvanX77/lionwings/remote"
-	"github.com/IvanX77/lionwings/server/filesystem"
+	"github.com/IvanX77/turbowings/config"
+	"github.com/IvanX77/turbowings/environment"
+	"github.com/IvanX77/turbowings/environment/docker"
+	"github.com/IvanX77/turbowings/remote"
+	"github.com/IvanX77/turbowings/server/filesystem"
 )
 
 type Manager struct {

@@ -4,10 +4,10 @@ import (
 	"emperror.dev/errors"
 	"github.com/apex/log"
 	"github.com/gin-gonic/gin"
-	"github.com/IvanX77/lionwings/config"
-	"github.com/IvanX77/lionwings/remote"
-	"github.com/IvanX77/lionwings/router/middleware"
-	wserver "github.com/IvanX77/lionwings/server"
+	"github.com/IvanX77/turbowings/config"
+	"github.com/IvanX77/turbowings/remote"
+	"github.com/IvanX77/turbowings/router/middleware"
+	wserver "github.com/IvanX77/turbowings/server"
 )
 
 // Configure configures the routing infrastructure for this daemon instance.

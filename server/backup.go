@@ -10,9 +10,9 @@ import (
 	"github.com/apex/log"
 	"github.com/docker/docker/client"
 
-	"github.com/IvanX77/lionwings/environment"
-	"github.com/IvanX77/lionwings/remote"
-	"github.com/IvanX77/lionwings/server/backup"
+	"github.com/IvanX77/turbowings/environment"
+	"github.com/IvanX77/turbowings/remote"
+	"github.com/IvanX77/turbowings/server/backup"
 )
 
 // Notifies the panel of a backup's state and returns an error if one is encountered
@@ -23,7 +23,7 @@ func (s *Server) notifyPanelOfBackup(uuid string, ad *backup.ArchiveDetails, suc
 			s.Log().WithFields(log.Fields{
 				"backup": uuid,
 				"error":  err,
-			}).Error("failed to notify panel of backup status due to lionwings error")
+			}).Error("failed to notify panel of backup status due to turbowings error")
 			return err
 		}
 

@@ -17,8 +17,8 @@ import (
 	"gopkg.in/ini.v1"
 	"gopkg.in/yaml.v3"
 
-	"github.com/IvanX77/lionwings/config"
-	"github.com/IvanX77/lionwings/internal/ufs"
+	"github.com/IvanX77/turbowings/config"
+	"github.com/IvanX77/turbowings/internal/ufs"
 )
 
 // The file parsing options that are available for a server configuration file.
@@ -109,7 +109,7 @@ type ConfigurationFile struct {
 	Replace         []ConfigurationFileReplacement `json:"replace"`
 	AllowCreateFile bool                           `json:"create_file"` // assumed true by unmarshal as it was the original behaviour
 
-	// Tracks LionWings' configuration so that we can quickly get values
+	// Tracks TurboWings' configuration so that we can quickly get values
 	// out of it when variables request it.
 	configuration []byte
 }

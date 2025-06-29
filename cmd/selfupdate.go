@@ -12,7 +12,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/IvanX77/lionwings/system"
+	"github.com/IvanX77/turbowings/system"
 	"github.com/spf13/cobra"
 )
 
@@ -25,12 +25,12 @@ var updateArgs struct {
 func newSelfupdateCommand() *cobra.Command {
 	command := &cobra.Command{
 		Use:   "update",
-		Short: "Update lionwings to the latest version",
+		Short: "Update turbowings to the latest version",
 		Run:   selfupdateCmdRun,
 	}
 
-	command.Flags().StringVar(&updateArgs.repoOwner, "repo-owner", "lionpanel-dev", "GitHub repository owner")
-	command.Flags().StringVar(&updateArgs.repoName, "repo-name", "lionwings", "GitHub repository name")
+	command.Flags().StringVar(&updateArgs.repoOwner, "repo-owner", "turbowings-dev", "GitHub repository owner")
+	command.Flags().StringVar(&updateArgs.repoName, "repo-name", "turbowings", "GitHub repository name")
 	command.Flags().BoolVar(&updateArgs.force, "force", false, "Force update even if on latest version")
 
 	return command
@@ -80,7 +80,7 @@ func selfupdateCmdRun(_ *cobra.Command, _ []string) {
 		return
 	}
 
-	fmt.Println("\nUpdate successful! Please restart the lionwings service (e.g., systemctl restart lionwings)")
+	fmt.Println("\nUpdate successful! Please restart the turbowings service (e.g., systemctl restart turbowings)")
 }
 
 func performUpdate(version, binaryName string) error {
@@ -89,7 +89,7 @@ func performUpdate(version, binaryName string) error {
 	checksumURL := fmt.Sprintf("https://github.com/%s/%s/releases/download/%s/checksums.txt",
 		updateArgs.repoOwner, updateArgs.repoName, version)
 
-	tmpDir, err := os.MkdirTemp("", "lionwings-update-*")
+	tmpDir, err := os.MkdirTemp("", "turbowings-update-*")
 	if err != nil {
 		return fmt.Errorf("failed to create temp directory: %v", err)
 	}

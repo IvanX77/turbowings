@@ -1,4 +1,4 @@
-module github.com/IvanX77/lionwings
+module github.com/IvanX77/turbowings
 
 go 1.23.0
 

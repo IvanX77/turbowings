@@ -10,7 +10,7 @@ import (
 	"github.com/docker/docker/api/types/network"
 	"github.com/docker/docker/client"
 
-	"github.com/IvanX77/lionwings/config"
+	"github.com/IvanX77/turbowings/config"
 )
 
 var (

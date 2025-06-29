@@ -4,7 +4,7 @@ import (
 	"context"
 	"time"
 
-	"github.com/IvanX77/lionwings/events"
+	"github.com/IvanX77/turbowings/events"
 )
 
 const (

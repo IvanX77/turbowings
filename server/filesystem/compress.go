@@ -15,8 +15,8 @@ import (
 	"github.com/klauspost/compress/zip"
 	"github.com/mholt/archives"
 
-	"github.com/IvanX77/lionwings/internal/ufs"
-	"github.com/IvanX77/lionwings/server/filesystem/archiverext"
+	"github.com/IvanX77/turbowings/internal/ufs"
+	"github.com/IvanX77/turbowings/server/filesystem/archiverext"
 )
 
 // CompressFiles compresses all the files matching the given paths in the

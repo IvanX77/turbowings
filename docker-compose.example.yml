@@ -1,6 +1,6 @@
 services:
-  lionwings:
-    image: ghcr.io/lionpanel-dev/lionwings:latest
+  turbowings:
+    image: ghcr.io/turbowings-dev/turbowings:latest
     restart: always
     networks:
       - wings0
@@ -12,14 +12,14 @@ services:
       TZ: "UTC"
       WINGS_UID: 988
       WINGS_GID: 988
-      WINGS_USERNAME: lionpanel
+      WINGS_USERNAME: turbowings
     volumes:
       - "/var/run/docker.sock:/var/run/docker.sock"
       - "/var/lib/docker/containers/:/var/lib/docker/containers/"
-      - "/etc/lionpanel/:/etc/lionpanel/"
-      - "/var/lib/lionpanel/:/var/lib/lionpanel/"
-      - "/var/log/lionpanel/:/var/log/lionpanel/"
-      - "/tmp/lionpanel/:/tmp/lionpanel/"
+      - "/etc/turbowings/:/etc/turbowings/"
+      - "/var/lib/turbowings/:/var/lib/turbowings/"
+      - "/var/log/turbowings/:/var/log/turbowings/"
+      - "/tmp/turbowings/:/tmp/turbowings/"
       - "/etc/ssl/certs:/etc/ssl/certs:ro"
       # you may need /srv/daemon-data if you are upgrading from an old daemon
       #- "/srv/daemon-data/:/srv/daemon-data/"

@@ -25,10 +25,10 @@ import (
 	"github.com/spf13/cobra"
 	dockerSystem "github.com/docker/docker/api/types/system" // Alias the correct system package
 
-	"github.com/IvanX77/lionwings/config"
-	"github.com/IvanX77/lionwings/environment"
-	"github.com/IvanX77/lionwings/loggers/cli"
-	"github.com/IvanX77/lionwings/system"
+	"github.com/IvanX77/turbowings/config"
+	"github.com/IvanX77/turbowings/environment"
+	"github.com/IvanX77/turbowings/loggers/cli"
+	"github.com/IvanX77/turbowings/system"
 )
 
 const (
@@ -47,7 +47,7 @@ var diagnosticsArgs struct {
 func newDiagnosticsCommand() *cobra.Command {
 	command := &cobra.Command{
 		Use:   "diagnostics",
-		Short: "Collect and report information about this LionWings instance to assist in debugging.",
+		Short: "Collect and report information about this TurboWings instance to assist in debugging.",
 		PreRun: func(cmd *cobra.Command, args []string) {
 			initConfig()
 			log.SetHandler(cli.Default)
@@ -61,9 +61,9 @@ func newDiagnosticsCommand() *cobra.Command {
 	return command
 }
 
-// diagnosticsCmdRun collects diagnostics about lionwings, its configuration and the node.
+// diagnosticsCmdRun collects diagnostics about turbowings, its configuration and the node.
 // We collect:
-// - lionwings and docker versions
+// - turbowings and docker versions
 // - relevant parts of daemon configuration
 // - the docker debug output
 // - running docker containers
@@ -97,9 +97,9 @@ func diagnosticsCmdRun(*cobra.Command, []string) {
 	dockerVersion, dockerInfo, dockerErr := getDockerInfo()
 
 	output := &strings.Builder{}
-	fmt.Fprintln(output, "LionPanel LionWings - Diagnostics Report")
+	fmt.Fprintln(output, "LionPanel TurboWings - Diagnostics Report")
 	printHeader(output, "Versions")
-	fmt.Fprintln(output, "               LionWings:", system.Version)
+	fmt.Fprintln(output, "               TurboWings:", system.Version)
 	if dockerErr == nil {
 		fmt.Fprintln(output, "              Docker:", dockerVersion.Version)
 	}
@@ -110,7 +110,7 @@ func diagnosticsCmdRun(*cobra.Command, []string) {
 		fmt.Fprintln(output, "                  OS:", os)
 	}
 
-	printHeader(output, "LionWings Configuration")
+	printHeader(output, "TurboWings Configuration")
 	if err := config.FromFile(config.DefaultLocation); err != nil {
 	}
 	cfg := config.Get()
@@ -167,11 +167,11 @@ func diagnosticsCmdRun(*cobra.Command, []string) {
 		fmt.Fprint(output, "Couldn't list containers: ", err)
 	}
 
-	printHeader(output, "Latest LionWings Logs")
+	printHeader(output, "Latest TurboWings Logs")
 	if diagnosticsArgs.IncludeLogs {
-		p := "/var/log/lionpanel/lionwings.log"
+		p := "/var/log/turbowings/turbowings.log"
 		if cfg != nil {
-			p = path.Join(cfg.System.LogDirectory, "lionwings.log")
+			p = path.Join(cfg.System.LogDirectory, "turbowings.log")
 		}
 		if c, err := exec.Command("tail", "-n", strconv.Itoa(diagnosticsArgs.LogLines), p).Output(); err != nil {
 			fmt.Fprintln(output, "No logs found or an error occurred.")
