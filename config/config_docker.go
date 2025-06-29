@@ -31,11 +31,11 @@ type DockerNetworkConfiguration struct {
 	// The name of the network to use. If this network already exists it will not
 	// be created. If it is not found, a new network will be created using the interface
 	// defined.
-	Name       string                  `default:"lion_nw"`
+	Name       string                  `default:"turbo_nw"`
 	ISPN       bool                    `default:"false" yaml:"ispn"`
 	IPv6       bool                    `default:"true" yaml:"IPv6"`
 	Driver     string                  `default:"bridge"`
-	Mode       string                  `default:"lion_nw" yaml:"network_mode"`
+	Mode       string                  `default:"turbo_nw" yaml:"network_mode"`
 	IsInternal bool                    `default:"false" yaml:"is_internal"`
 	EnableICC  bool                    `default:"true" yaml:"enable_icc"`
 	NetworkMTU int64                   `default:"1500" yaml:"network_mtu"`
